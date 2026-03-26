@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Factures — D-Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--card:rgba(12,11,14,0.95);--border:rgba(255,255,255,0.07);--r:14px;}
+html,body{width:100%;min-height:100%;background:#000;color:#fff;font-family:'Inter',system-ui,sans-serif;overflow-x:hidden;}
+
+canvas#stars{position:fixed;inset:0;z-index:0;pointer-events:none;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;align-items:center;padding:20px 40px;border-bottom:1px solid rgba(255,255,255,0.05);background:rgba(11,10,12,0.55);backdrop-filter:blur(16px) saturate(150%) brightness(1.1);}
+main{padding-top:88px!important;}
+.logo{font-size:17px;font-weight:900;letter-spacing:-0.04em;color:#fff;}
+.logo span{color:rgba(255,255,255,0.28);}
+.nav-right{margin-left:auto;display:flex;align-items:center;gap:8px;}
+.nav-dot{width:6px;height:6px;border-radius:50%;background:rgba(74,222,128,0.7);box-shadow:0 0 8px rgba(74,222,128,0.4);}
+.nav-status{font-size:11px;color:rgba(255,255,255,0.3);letter-spacing:.04em;}
+
+main{position:relative;z-index:1;padding:48px 40px 80px;max-width:1440px;margin:0 auto;width:100%;}
+
+.section{margin-bottom:56px;}
+.section-header{margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,0.05);}
+.section-label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.22);}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;}
+
+.card{
+  position:relative;display:flex;flex-direction:column;gap:14px;
+  padding:22px;border-radius:var(--r);
+  background:var(--card);border:1px solid var(--border);
+  text-decoration:none;color:inherit;
+  transition:border-color .2s, transform .2s, background .2s;
+  overflow:hidden;
+}
+.card::before{
+  content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;
+  background:linear-gradient(145deg,rgba(255,255,255,0.12) 0%,rgba(255,255,255,0.02) 50%,rgba(255,255,255,0.08) 100%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  mask-composite:exclude;pointer-events:none;
+}
+a.card:hover{border-color:rgba(255,255,255,0.16);transform:translateY(-2px);background:rgba(16,15,18,0.98);}
+
+.card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;}
+.card-icon-box{width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.04);border-radius:8px;flex-shrink:0;}
+.card-icon-box i{width:16px;height:16px;stroke:rgba(255,255,255,0.45);}
+
+.badge{display:inline-flex;align-items:center;padding:2px 9px;border-radius:100px;font-size:10px;font-weight:600;white-space:nowrap;}
+.badge-amount{background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.2);color:rgba(74,222,128,0.85);}
+
+.card-sector{font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,0.25);margin-bottom:6px;}
+.card-name{font-size:17px;font-weight:700;letter-spacing:-.02em;color:#fff;line-height:1.2;}
+.card-desc{font-size:12px;line-height:1.55;color:rgba(255,255,255,0.38);}
+.card-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:12px;border-top:1px solid rgba(255,255,255,0.05);}
+.card-date{font-size:10px;color:rgba(255,255,255,0.22);}
+.card-arrow{display:flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);}
+.card-arrow i{width:12px;height:12px;stroke:rgba(255,255,255,0.3);}
+a.card:hover .card-arrow{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.16);}
+a.card:hover .card-arrow i{stroke:rgba(255,255,255,0.7);}
+
+footer{position:relative;z-index:1;padding:24px 40px;border-top:1px solid rgba(255,255,255,0.05);display:flex;justify-content:space-between;font-size:10px;color:rgba(255,255,255,0.18);}
+</style>
+</head>
+<body>
+
+<canvas id="stars"></canvas>
+
+<nav>
+  <div class="logo">D<span>.</span>STUDIO <span style="font-weight:400;font-size:13px;margin-left:8px;opacity:0.4">invoices</span></div>
+  <div class="nav-right">
+    <div class="nav-dot"></div>
+    <span class="nav-status">system online</span>
+  </div>
+</nav>
+
+<main>
+  <div class="section">
+    <div class="section-header">
+      <div class="section-label">Factures Kevin Le Junter</div>
+    </div>
+    <div class="grid">
+
+      <a class="card" href="facture-22.html">
+        <div class="card-top">
+          <div class="card-icon-box"><i data-lucide="file-text"></i></div>
+          <span class="badge badge-amount">800.00 &euro;</span>
+        </div>
+        <div class="card-sector">Facture N. 0022</div>
+        <div class="card-name">Landing page Kalel Invest</div>
+        <div class="card-desc">Integration depuis Figma mockup — 21.33h a 37.50&euro;/h</div>
+        <div class="card-foot">
+          <span class="card-date">26 Mars 2026</span>
+          <div class="card-arrow"><i data-lucide="arrow-up-right"></i></div>
+        </div>
+      </a>
+
+      <a class="card" href="facture-23.html">
+        <div class="card-top">
+          <div class="card-icon-box"><i data-lucide="file-text"></i></div>
+          <span class="badge badge-amount">431.25 &euro;</span>
+        </div>
+        <div class="card-sector">Facture N. 0023</div>
+        <div class="card-name">Bug fixes Maires &amp; Citoyens</div>
+        <div class="card-desc">12 corrections fevrier 2026 — 11.5h a 37.50&euro;/h</div>
+        <div class="card-foot">
+          <span class="card-date">26 Mars 2026</span>
+          <div class="card-arrow"><i data-lucide="arrow-up-right"></i></div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <span>D-Studio &middot; Kevin Le Junter</span>
+  <span>dstudio.company</span>
+</footer>
+
+<script>
+lucide.createIcons();
+
+// Stars background (same as dstudio-audits)
+const c=document.getElementById('stars'),x=c.getContext('2d');
+function resize(){c.width=innerWidth;c.height=innerHeight;}
+resize();addEventListener('resize',resize);
+const stars=Array.from({length:120},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.2+0.3,a:Math.random()*0.4+0.1,s:Math.random()*0.003+0.001}));
+function draw(){x.clearRect(0,0,c.width,c.height);stars.forEach(s=>{s.a+=Math.sin(Date.now()*s.s)*0.002;x.beginPath();x.arc(s.x,s.y,s.r,0,Math.PI*2);x.fillStyle=`rgba(255,255,255,${Math.max(0.05,Math.min(0.5,s.a))})`;x.fill();});requestAnimationFrame(draw);}
+draw();
+</script>
+</body>
+</html>
