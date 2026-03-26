@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-body{background:#080808;color:#fff;font-family:'Inter',system-ui,sans-serif;font-size:12px;line-height:1.5;width:210mm;min-height:297mm;padding:40px 44px 80px;margin:0 auto;}
+body{background:#080808;color:#fff;font-family:'Inter',system-ui,sans-serif;font-size:12px;line-height:1.5;max-width:210mm;min-height:100vh;padding:40px 44px 80px;margin:0 auto;}
 
 /* Header */
 .header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px;}
@@ -65,8 +65,26 @@ body{background:#080808;color:#fff;font-family:'Inter',system-ui,sans-serif;font
 .footer-left{font-size:8.5px;color:#333;}
 .footer-right{font-size:8.5px;color:#444;}
 
+@media(max-width:640px){
+  body{padding:20px 16px 70px;font-size:11px;}
+  .logo-wordmark{font-size:16px;}
+  .header{flex-wrap:wrap;gap:12px;}
+  .parties{flex-direction:column;}
+  .party-card.sender{flex:1;}
+  .table-header{display:none;}
+  .item-row{flex-wrap:wrap;gap:6px;}
+  .item-left{flex:1 1 100%;}
+  .item-rate,.item-hrs,.item-amount{width:auto;text-align:left;font-size:11px;}
+  .item-rate::before{content:'Taux: ';color:#555;font-size:9px;}
+  .item-hrs::before{content:'Heures: ';color:#555;font-size:9px;}
+  .item-amount::before{content:'Montant: ';color:#555;font-size:9px;}
+  .item-amount{margin-left:auto;}
+  .payment-card{flex-direction:column;gap:12px;}
+  .payment-amount{text-align:left;}
+  .footer{position:relative;bottom:auto;left:auto;right:auto;flex-direction:column;gap:6px;margin-top:24px;padding:12px 0 0;}
+}
 @media print{
-  body{padding:20px 30px 40px;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  body{width:210mm;padding:20px 30px 40px;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
   .footer{position:fixed;bottom:10px;left:30px;right:30px;}
 }
 </style>
