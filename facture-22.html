@@ -141,7 +141,7 @@ body{background:#080808;color:#fff;font-family:'Inter',system-ui,sans-serif;font
   <div class="footer-right">Facture 0022</div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"></script>
+<script src="https://unpkg.com/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
 <script>
 const INVOICE = {
   number: "FACTURE N. 0022",
@@ -158,7 +158,8 @@ const INVOICE = {
 };
 
 function exportPDF() {
-  const { jsPDF } = window.jspdf;
+  const jsPDF = window.jspdf?.jsPDF || window.jsPDF;
+  if (!jsPDF) { alert("Erreur: jsPDF non charge. Rechargez la page."); return; }
   const doc = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
   const W = 210, H = 297, M = 14;
   const cw = W - M * 2;
