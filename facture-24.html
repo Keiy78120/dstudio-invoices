@@ -105,7 +105,7 @@ body{background:#080808;color:#fff;font-family:'Inter',system-ui,sans-serif;font
 <div class="tva-note">TVA non applicable, art. 293 B du CGI</div>
 
 <div class="payment-card">
-  <div><div class="payment-title">Reglement :</div><div class="payment-sub">Virement bancaire<br>IBAN : FR76 1695 8000 0165 5141 1616 805<br>BIC : QNTOFRP1XXX</div></div>
+  <div><div class="payment-title">Reglement :</div><div class="payment-sub">Virement bancaire<br>IBAN : FR76 1751 5006 0004 1234 2685 319<br>BIC : CEPAFRPP751</div></div>
   <div><div class="payment-amount">800.00 &euro;</div></div>
 </div>
 
@@ -190,8 +190,8 @@ function exportPDF() {
   doc.text("Reglement :", M + 5, ty + 8);
   doc.setFontSize(8); doc.setFont("helvetica", "normal"); doc.setTextColor(102, 102, 102);
   doc.text("Virement bancaire", M + 5, ty + 14);
-  doc.text("IBAN : FR76 1695 8000 0165 5141 1616 805", M + 5, ty + 19);
-  doc.text("BIC : QNTOFRP1XXX", M + 5, ty + 24);
+  doc.text("IBAN : FR76 1751 5006 0004 1234 2685 319", M + 5, ty + 19);
+  doc.text("BIC : CEPAFRPP751", M + 5, ty + 24);
   doc.setFontSize(14); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
   doc.text("800.00 \u20AC", W - M - 5, ty + 14, { align: "right" });
 
