@@ -8,8 +8,6 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:#080808;color:#fff;font-family:'Inter',system-ui,sans-serif;font-size:12px;line-height:1.5;max-width:210mm;min-height:100vh;padding:58px 44px 40px;margin:0 auto;}
-
-/* Header */
 .header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:28px;}
 .logo{display:flex;align-items:center;gap:10px;}
 .logo-icon{width:36px;height:36px;background:#1a1a1a;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;color:#fff;}
@@ -17,8 +15,6 @@ body{background:#080808;color:#fff;font-family:'Inter',system-ui,sans-serif;font
 .header-invoice{text-align:right;}
 .inv-number{font-size:12px;color:#999;margin-bottom:3px;}
 .inv-date{font-size:12px;color:#999;}
-
-/* Party cards */
 .parties{display:flex;gap:12px;margin-bottom:24px;}
 .party-card{flex:1;border:1px solid #222;border-radius:14px;padding:18px 20px;display:flex;flex-direction:column;min-height:110px;}
 .party-card.sender{flex:0 0 55%;}
@@ -26,16 +22,10 @@ body{background:#080808;color:#fff;font-family:'Inter',system-ui,sans-serif;font
 .party-detail{font-size:10.5px;color:#888;line-height:1.9;}
 .client-label{font-size:8.5px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#888;margin-bottom:5px;}
 .party-bottom{margin-top:auto;padding-top:8px;font-size:9px;color:#666;text-align:right;}
-
-/* Table */
 .table-card{border:1px solid #222;border-radius:14px;padding:16px 20px;margin-bottom:16px;}
 .table-header{display:flex;gap:6px;margin-bottom:4px;align-items:center;}
 .pill{display:inline-flex;align-items:center;height:28px;padding:0 14px;border:1px solid #282828;border-radius:100px;font-size:8px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#666;background:transparent;}
-.pill-desc{flex:1;}
-.pill-rate{width:80px;justify-content:center;}
-.pill-hrs{width:70px;justify-content:center;}
-.pill-amount{width:90px;justify-content:flex-end;}
-
+.pill-desc{flex:1;}.pill-rate{width:80px;justify-content:center;}.pill-hrs{width:70px;justify-content:center;}.pill-amount{width:90px;justify-content:flex-end;}
 .item-row{display:flex;align-items:flex-start;padding:13px 0;border-bottom:1px solid #141414;}
 .item-row:last-child{border-bottom:none;}
 .item-left{flex:1;}
@@ -45,32 +35,20 @@ body{background:#080808;color:#fff;font-family:'Inter',system-ui,sans-serif;font
 .item-rate{width:80px;text-align:center;font-size:12px;color:#ccc;padding-top:1px;}
 .item-hrs{width:70px;text-align:center;font-size:12px;color:#ccc;padding-top:1px;}
 .item-amount{width:90px;text-align:right;font-size:12px;font-weight:500;color:#fff;padding-top:1px;}
-
-/* Total */
 .total-row{display:flex;justify-content:flex-end;align-items:center;padding-top:14px;gap:20px;}
 .total-label{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#666;}
 .total-amount{font-size:14px;font-weight:700;color:#fff;letter-spacing:-0.3px;min-width:90px;text-align:right;}
-
-/* Payment */
 .payment-card{border:1px solid #222;border-radius:14px;padding:16px 20px;display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;}
 .payment-title{font-size:13px;font-weight:600;color:#fff;margin-bottom:5px;}
 .payment-sub{font-size:10px;color:#666;line-height:1.8;}
 .payment-amount{font-size:18px;font-weight:700;color:#fff;letter-spacing:-0.5px;text-align:right;}
-
-/* TVA note */
 .tva-note{text-align:center;font-size:9px;color:#555;margin-bottom:16px;font-style:italic;}
-
-/* Footer */
 .footer{position:relative;display:flex;justify-content:space-between;align-items:center;padding-top:12px;margin-top:40px;border-top:1px solid #161616;}
-.footer-left{font-size:8.5px;color:#333;}
-.footer-right{font-size:8.5px;color:#444;}
-
-/* PDF button */
+.footer-left{font-size:8.5px;color:#333;}.footer-right{font-size:8.5px;color:#444;}
 .pdf-bar{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:center;gap:12px;padding:10px;background:rgba(0,0,0,0.85);backdrop-filter:blur(12px);border-bottom:1px solid #222;}
 .pdf-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 20px;border:1px solid #333;border-radius:8px;background:#151515;color:#fff;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;}
 .pdf-btn:hover{background:#222;border-color:#444;}
 .pdf-btn svg{width:16px;height:16px;}
-
 @media(max-width:640px){
   body{padding:60px 16px 20px;font-size:11px;}
   .logo-wordmark{font-size:16px;}
@@ -89,33 +67,18 @@ body{background:#080808;color:#fff;font-family:'Inter',system-ui,sans-serif;font
   .payment-amount{text-align:left;}
   .footer{flex-direction:column;gap:6px;padding:12px 0 0;}
 }
-@media print{
-  @page{size:A4;margin:0;}
-  *{overflow:visible!important;float:none!important;}
-  .pdf-bar{display:none!important;}
-  body{background:#080808;color:#fff;width:210mm;max-width:210mm;min-height:auto;padding:12mm 14mm;margin:0;-webkit-print-color-adjust:exact;print-color-adjust:exact;color-adjust:exact;}
-  .header{display:flex;}
-  .parties{display:flex;}
-  .item-row{display:flex;}
-  .total-row{display:flex;}
-  .payment-card{display:flex;}
-  .table-header{display:flex;}
-  .parties,.table-card,.payment-card{break-inside:avoid;}
-  .footer{position:fixed;bottom:8mm;left:14mm;right:14mm;margin-top:0;}
-}
+@media print{.pdf-bar{display:none!important;}}
 </style>
 </head>
 <body>
 
-<!-- PDF Export Bar -->
 <div class="pdf-bar">
-  <button class="pdf-btn" onclick="window.print()">
+  <button class="pdf-btn" onclick="exportPDF()">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
     Exporter PDF
   </button>
 </div>
 
-<!-- Header -->
 <div class="header">
   <div class="logo">
     <div class="logo-icon">K</div>
@@ -127,28 +90,20 @@ body{background:#080808;color:#fff;font-family:'Inter',system-ui,sans-serif;font
   </div>
 </div>
 
-<!-- Parties -->
 <div class="parties">
   <div class="party-card sender">
     <div class="party-main-name">Kevin LE JUNTER</div>
-    <div class="party-detail">
-      48 rue des Eveuses, 78120 Rambouillet<br>
-      lejunterkevin@gmail.com
-    </div>
+    <div class="party-detail">48 rue des Eveuses, 78120 Rambouillet<br>lejunterkevin@gmail.com</div>
     <div class="party-bottom">SIRET 924 189 863 00013</div>
   </div>
   <div class="party-card">
     <div class="client-label">Facturer a :</div>
     <div class="party-main-name">D-STUDIO</div>
-    <div class="party-detail">
-      7 rue Lauriston, 75016 Paris<br>
-      contact@dstudio.company
-    </div>
+    <div class="party-detail">7 rue Lauriston, 75016 Paris<br>contact@dstudio.company</div>
     <div class="party-bottom">983 160 797 R.C.S. PARIS</div>
   </div>
 </div>
 
-<!-- Table -->
 <div class="table-card">
   <div class="table-header">
     <div class="pill pill-desc">Description</div>
@@ -156,7 +111,6 @@ body{background:#080808;color:#fff;font-family:'Inter',system-ui,sans-serif;font
     <div class="pill pill-hrs">Heures</div>
     <div class="pill pill-amount">Montant</div>
   </div>
-
   <div class="item-row">
     <div class="item-left">
       <div class="item-title">Landing page Kalel Invest</div>
@@ -166,36 +120,163 @@ body{background:#080808;color:#fff;font-family:'Inter',system-ui,sans-serif;font
     <div class="item-hrs">21.33</div>
     <div class="item-amount">800.00 &euro;</div>
   </div>
-
   <div class="total-row">
     <span class="total-label">Total</span>
     <span class="total-amount">800.00 &euro;</span>
   </div>
 </div>
 
-<!-- TVA -->
 <div class="tva-note">TVA non applicable, art. 293 B du CGI</div>
 
-<!-- Payment -->
 <div class="payment-card">
   <div>
     <div class="payment-title">Reglement :</div>
-    <div class="payment-sub">
-      Virement bancaire<br>
-      IBAN : FR76 1695 8000 0165 5141 1616 805<br>
-      BIC : QNTOFRP1XXX
-    </div>
+    <div class="payment-sub">Virement bancaire<br>IBAN : FR76 1695 8000 0165 5141 1616 805<br>BIC : QNTOFRP1XXX</div>
   </div>
-  <div>
-    <div class="payment-amount">800.00 &euro;</div>
-  </div>
+  <div><div class="payment-amount">800.00 &euro;</div></div>
 </div>
 
-<!-- Footer -->
 <div class="footer">
   <div class="footer-left">Kevin Le Junter &middot; lejunterkevin@gmail.com &middot; SIRET 924 189 863 00013</div>
   <div class="footer-right">Facture 0022</div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"></script>
+<script>
+const INVOICE = {
+  number: "FACTURE N. 0022",
+  date: "26 Mars 2026",
+  from: { name: "Kevin LE JUNTER", address: "48 rue des Eveuses, 78120 Rambouillet", email: "lejunterkevin@gmail.com", siret: "SIRET 924 189 863 00013" },
+  to: { label: "Facturer a :", name: "D-STUDIO", address: "7 rue Lauriston, 75016 Paris", email: "contact@dstudio.company", siret: "983 160 797 R.C.S. PARIS" },
+  items: [
+    { title: "Landing page Kalel Invest", subtitle: "Integration depuis Figma mockup", rate: "37.50", hrs: "21.33", amount: "800.00" }
+  ],
+  total: "800.00",
+  tva: "TVA non applicable, art. 293 B du CGI",
+  payment: { method: "Virement bancaire", iban: "FR76 1695 8000 0165 5141 1616 805", bic: "QNTOFRP1XXX" },
+  footer: { left: "Kevin Le Junter · lejunterkevin@gmail.com · SIRET 924 189 863 00013", right: "Facture 0022" }
+};
+
+function exportPDF() {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
+  const W = 210, H = 297, M = 14;
+  const cw = W - M * 2;
+
+  // Background
+  doc.setFillColor(8, 8, 8);
+  doc.rect(0, 0, W, H, "F");
+
+  // Header
+  // Logo icon
+  doc.setFillColor(26, 26, 26);
+  doc.roundedRect(M, 12, 10, 10, 2, 2, "F");
+  doc.setFontSize(14); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
+  doc.text("K", M + 5, 19.5, { align: "center" });
+  // Logo wordmark
+  doc.setFontSize(16); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
+  doc.text("KEVIN LE JUNTER", M + 13, 19);
+  // Invoice number + date
+  doc.setFontSize(9); doc.setFont("helvetica", "normal"); doc.setTextColor(153, 153, 153);
+  doc.text(INVOICE.number, W - M, 16, { align: "right" });
+  doc.text(INVOICE.date, W - M, 21, { align: "right" });
+
+  // Separator
+  doc.setDrawColor(34, 34, 34); doc.setLineWidth(0.3);
+  doc.line(M, 28, W - M, 28);
+
+  // Party cards
+  const cardY = 33, cardH = 38;
+  const leftW = cw * 0.55 - 3, rightW = cw * 0.45 - 3;
+  const rightX = M + leftW + 6;
+
+  // From card
+  doc.setDrawColor(34, 34, 34); doc.setLineWidth(0.3);
+  doc.roundedRect(M, cardY, leftW, cardH, 3, 3, "S");
+  doc.setFontSize(10); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
+  doc.text(INVOICE.from.name, M + 5, cardY + 8);
+  doc.setFontSize(8); doc.setFont("helvetica", "normal"); doc.setTextColor(136, 136, 136);
+  doc.text(INVOICE.from.address, M + 5, cardY + 14);
+  doc.text(INVOICE.from.email, M + 5, cardY + 19);
+  doc.setFontSize(7); doc.setTextColor(102, 102, 102);
+  doc.text(INVOICE.from.siret, M + leftW - 5, cardY + cardH - 4, { align: "right" });
+
+  // To card
+  doc.setDrawColor(34, 34, 34);
+  doc.roundedRect(rightX, cardY, rightW, cardH, 3, 3, "S");
+  doc.setFontSize(7); doc.setFont("helvetica", "bold"); doc.setTextColor(136, 136, 136);
+  doc.text("FACTURER A :", rightX + 5, cardY + 7);
+  doc.setFontSize(10); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
+  doc.text(INVOICE.to.name, rightX + 5, cardY + 13);
+  doc.setFontSize(8); doc.setFont("helvetica", "normal"); doc.setTextColor(136, 136, 136);
+  doc.text(INVOICE.to.address, rightX + 5, cardY + 19);
+  doc.text(INVOICE.to.email, rightX + 5, cardY + 24);
+  doc.setFontSize(7); doc.setTextColor(102, 102, 102);
+  doc.text(INVOICE.to.siret, rightX + rightW - 5, cardY + cardH - 4, { align: "right" });
+
+  // Table
+  let ty = cardY + cardH + 10;
+  doc.setDrawColor(34, 34, 34);
+  // Table header pills
+  doc.setFontSize(6.5); doc.setFont("helvetica", "bold"); doc.setTextColor(102, 102, 102);
+  doc.text("DESCRIPTION", M + 8, ty + 4);
+  doc.text("TAUX", 120, ty + 4, { align: "center" });
+  doc.text("HEURES", 142, ty + 4, { align: "center" });
+  doc.text("MONTANT", W - M - 5, ty + 4, { align: "right" });
+
+  doc.setDrawColor(20, 20, 20); doc.line(M, ty + 7, W - M, ty + 7);
+  ty += 12;
+
+  // Items
+  for (const item of INVOICE.items) {
+    doc.setFontSize(9.5); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
+    doc.text(item.title, M + 5, ty);
+    doc.setFontSize(7.5); doc.setFont("helvetica", "normal"); doc.setTextColor(119, 119, 119);
+    doc.text("> " + item.subtitle, M + 5, ty + 5);
+    doc.setFontSize(9); doc.setTextColor(204, 204, 204);
+    doc.text(item.rate + " \u20AC", 120, ty, { align: "center" });
+    doc.text(item.hrs, 142, ty, { align: "center" });
+    doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
+    doc.text(item.amount + " \u20AC", W - M - 5, ty, { align: "right" });
+    ty += 14;
+  }
+
+  // Total
+  doc.setDrawColor(20, 20, 20); doc.line(120, ty, W - M, ty);
+  ty += 6;
+  doc.setFontSize(7.5); doc.setFont("helvetica", "bold"); doc.setTextColor(102, 102, 102);
+  doc.text("TOTAL", 150, ty, { align: "right" });
+  doc.setFontSize(11); doc.setTextColor(255, 255, 255);
+  doc.text(INVOICE.total + " \u20AC", W - M - 5, ty, { align: "right" });
+
+  // TVA
+  ty += 10;
+  doc.setFontSize(7); doc.setFont("helvetica", "italic"); doc.setTextColor(85, 85, 85);
+  doc.text(INVOICE.tva, W / 2, ty, { align: "center" });
+
+  // Payment card
+  ty += 8;
+  const payH = 28;
+  doc.setDrawColor(34, 34, 34);
+  doc.roundedRect(M, ty, cw, payH, 3, 3, "S");
+  doc.setFontSize(10); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
+  doc.text("Reglement :", M + 5, ty + 8);
+  doc.setFontSize(8); doc.setFont("helvetica", "normal"); doc.setTextColor(102, 102, 102);
+  doc.text(INVOICE.payment.method, M + 5, ty + 14);
+  doc.text("IBAN : " + INVOICE.payment.iban, M + 5, ty + 19);
+  doc.text("BIC : " + INVOICE.payment.bic, M + 5, ty + 24);
+  doc.setFontSize(14); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
+  doc.text(INVOICE.total + " \u20AC", W - M - 5, ty + 14, { align: "right" });
+
+  // Footer
+  doc.setDrawColor(22, 22, 22); doc.line(M, H - 18, W - M, H - 18);
+  doc.setFontSize(6.5); doc.setFont("helvetica", "normal"); doc.setTextColor(51, 51, 51);
+  doc.text(INVOICE.footer.left, M, H - 14);
+  doc.setTextColor(68, 68, 68);
+  doc.text(INVOICE.footer.right, W - M, H - 14, { align: "right" });
+
+  doc.save("Facture-0022-Kevin-Le-Junter.pdf");
+}
+</script>
 </body>
 </html>
