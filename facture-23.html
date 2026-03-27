@@ -70,7 +70,7 @@ body{background:#080808;color:#fff;font-family:'Inter',system-ui,sans-serif;font
 .pdf-btn{display:inline-flex;align-items:center;gap:8px;padding:8px 20px;border:1px solid #333;border-radius:8px;background:#151515;color:#fff;font-family:'Inter',sans-serif;font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;}
 .pdf-btn:hover{background:#222;border-color:#444;}
 .pdf-btn svg{width:16px;height:16px;}
-.pdf-btn.loading{opacity:0.5;pointer-events:none;}
+
 
 @media(max-width:640px){
   body{padding:60px 16px 20px;font-size:11px;}
@@ -91,10 +91,12 @@ body{background:#080808;color:#fff;font-family:'Inter',system-ui,sans-serif;font
   .footer{flex-direction:column;gap:6px;padding:12px 0 0;}
 }
 @media print{
+  @page{size:A4;margin:15mm 12mm;}
   .pdf-bar{display:none!important;}
-  body{width:210mm;padding:20px 30px 40px;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
-  .footer{position:fixed;bottom:10px;left:30px;right:30px;}
-}
+  body{background:#080808;color:#fff;width:100%;max-width:100%;min-height:auto;padding:0;margin:0;-webkit-print-color-adjust:exact;print-color-adjust:exact;color-adjust:exact;}
+  .parties,.table-card,.payment-card,.item-row{break-inside:avoid;}
+  .footer{position:fixed;bottom:0;left:0;right:0;margin-top:0;}
+
 </style>
 </head>
 <body>
@@ -311,48 +313,9 @@ body{background:#080808;color:#fff;font-family:'Inter',system-ui,sans-serif;font
   <div class="footer-right">Facture 0023</div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"></script>
+
 <script>
-function exportPDF(){
-  const btn=document.querySelector('.pdf-btn');
-  btn.classList.add('loading');
-  btn.textContent='Generation...';
-  const bar=document.querySelector('.pdf-bar');
-  const footer=document.querySelector('.footer');
-  bar.style.display='none';
-  footer.style.position='relative';
-  footer.style.bottom='auto';
-  footer.style.left='auto';
-  footer.style.right='auto';
-  footer.style.marginTop='24px';
-  document.body.style.width='794px';
-  document.body.style.maxWidth='794px';
-  document.body.style.minHeight='auto';
-  document.body.style.margin='0';
-  document.body.style.padding='20px 30px 30px';
-  html2pdf().set({
-    margin:[0,0,0,0],
-    filename:'Facture-0023-Kevin-Le-Junter.pdf',
-    image:{type:'jpeg',quality:0.98},
-    html2canvas:{scale:2,backgroundColor:'#080808',useCORS:true,width:794,windowWidth:794,scrollX:0,scrollY:0},
-    jsPDF:{unit:'mm',format:'a4',orientation:'portrait'},
-    pagebreak:{mode:['avoid-all','css','legacy']}
-  }).from(document.body).save().then(()=>{
-    bar.style.display='';
-    footer.style.position='';
-    footer.style.bottom='';
-    footer.style.left='';
-    footer.style.right='';
-    footer.style.marginTop='';
-    document.body.style.width='';
-    document.body.style.maxWidth='';
-    document.body.style.minHeight='';
-    document.body.style.margin='';
-    document.body.style.padding='';
-    btn.classList.remove('loading');
-    btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Exporter PDF';
-  });
-}
+function exportPDF(){ window.print(); }
 </script>
 </body>
 </html>
