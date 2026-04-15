@@ -104,14 +104,17 @@ body{background:#080808;color:#fff;font-family:'Inter',system-ui,sans-serif;font
   <div class="item-row"><div class="item-left"><div class="item-title">Corrections Flutter</div><div class="item-subtitle">Firebase platform options, null safety pass, bindings optimisation, video upload</div></div><div class="item-rate">37.50 &euro;</div><div class="item-hrs">3</div><div class="item-amount">112.50 &euro;</div></div>
   <div class="item-row"><div class="item-left"><div class="item-title">Deploiements &amp; validation beta+prod</div><div class="item-subtitle">Deploy GAE API+APP, smoke tests, cleanup versions, whitelist IP Brevo</div></div><div class="item-rate">37.50 &euro;</div><div class="item-hrs">2.5</div><div class="item-amount">93.75 &euro;</div></div>
   <div class="item-row"><div class="item-left"><div class="item-title">Tests E2E &amp; documentation</div><div class="item-subtitle">Playwright multi-role desktop+mobile, Flutter web, rapports stabilisation</div></div><div class="item-rate">37.50 &euro;</div><div class="item-hrs">2.5</div><div class="item-amount">93.75 &euro;</div></div>
-  <div class="total-row"><span class="total-label">Total</span><span class="total-amount">637.50 &euro;</span></div>
+  <div class="item-row"><div class="item-left"><div class="item-title">Responsive iPad &amp; optimisations multi-devices</div><div class="item-subtitle">Adaptation tablette, breakpoints iPad, media queries, grilles responsives globales</div></div><div class="item-rate">37.50 &euro;</div><div class="item-hrs">2.5</div><div class="item-amount">93.75 &euro;</div></div>
+  <div class="item-row"><div class="item-left"><div class="item-title">Refonte fiches detail &amp; captures</div><div class="item-subtitle">Redesign pages fiches, screenshots produit, ameliorations visuelles</div></div><div class="item-rate">37.50 &euro;</div><div class="item-hrs">2</div><div class="item-amount">75.00 &euro;</div></div>
+  <div class="item-row"><div class="item-left"><div class="item-title">Corrections chargement &amp; gestion comptes</div><div class="item-subtitle">Fix loading pages, swap accounts, stabilisation navigation multi-roles</div></div><div class="item-rate">37.50 &euro;</div><div class="item-hrs">1.5</div><div class="item-amount">56.25 &euro;</div></div>
+  <div class="total-row"><span class="total-label">Total</span><span class="total-amount">862.50 &euro;</span></div>
 </div>
 
 <div class="tva-note">TVA non applicable, art. 293 B du CGI</div>
 
 <div class="payment-card">
   <div><div class="payment-title">Reglement :</div><div class="payment-sub">Virement bancaire<br>IBAN : FR76 2823 3000 0133 9117 2040 339<br>BIC : REVOLT21</div></div>
-  <div><div class="payment-amount">637.50 &euro;</div></div>
+  <div><div class="payment-amount">862.50 &euro;</div></div>
 </div>
 
 <div class="footer">
@@ -126,7 +129,10 @@ const ITEMS = [
   { title: "Stabilisation frontend Angular", sub: "6 fixes E2E, messagerie citoyen/maire, responsive mobile, isolation envs beta/prod", rate: "37.50", hrs: "4", amount: "150.00" },
   { title: "Corrections Flutter", sub: "Firebase platform options, null safety pass, bindings optimisation, video upload", rate: "37.50", hrs: "3", amount: "112.50" },
   { title: "Deploiements & validation beta+prod", sub: "Deploy GAE API+APP, smoke tests, cleanup versions, whitelist IP Brevo", rate: "37.50", hrs: "2.5", amount: "93.75" },
-  { title: "Tests E2E & documentation", sub: "Playwright multi-role desktop+mobile, Flutter web, rapports stabilisation", rate: "37.50", hrs: "2.5", amount: "93.75" }
+  { title: "Tests E2E & documentation", sub: "Playwright multi-role desktop+mobile, Flutter web, rapports stabilisation", rate: "37.50", hrs: "2.5", amount: "93.75" },
+  { title: "Responsive iPad & optimisations multi-devices", sub: "Adaptation tablette, breakpoints iPad, media queries, grilles responsives globales", rate: "37.50", hrs: "2.5", amount: "93.75" },
+  { title: "Refonte fiches detail & captures", sub: "Redesign pages fiches, screenshots produit, ameliorations visuelles", rate: "37.50", hrs: "2", amount: "75.00" },
+  { title: "Corrections chargement & gestion comptes", sub: "Fix loading pages, swap accounts, stabilisation navigation multi-roles", rate: "37.50", hrs: "1.5", amount: "56.25" }
 ];
 
 function exportPDF() {
@@ -231,7 +237,7 @@ function exportPDF() {
   doc.setFontSize(7.5); doc.setFont("helvetica", "bold"); doc.setTextColor(102, 102, 102);
   doc.text("TOTAL", 150, ty, { align: "right" });
   doc.setFontSize(11); doc.setTextColor(255, 255, 255);
-  doc.text("637.50 \u20AC", W - M - 5, ty, { align: "right" });
+  doc.text("862.50 \u20AC", W - M - 5, ty, { align: "right" });
 
   // TVA
   ty += 10;
@@ -248,7 +254,7 @@ function exportPDF() {
   doc.text("IBAN : FR76 2823 3000 0133 9117 2040 339", M + 5, ty + 19);
   doc.text("BIC : REVOLT21", M + 5, ty + 24);
   doc.setFontSize(14); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
-  doc.text("637.50 \u20AC", W - M - 5, ty + 14, { align: "right" });
+  doc.text("862.50 \u20AC", W - M - 5, ty + 14, { align: "right" });
 
   drawFooter();
   doc.save("Facture-0025-Kevin-Le-Junter.pdf");
