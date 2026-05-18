@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Facture 0025 — Kevin Le Junter</title>
+<title>Facture 0027 — Kevin Le Junter</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet"/>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -25,15 +25,13 @@ body{background:#080808;color:#fff;font-family:'Inter',system-ui,sans-serif;font
 .table-card{border:1px solid #222;border-radius:14px;padding:16px 20px;margin-bottom:16px;}
 .table-header{display:flex;gap:6px;margin-bottom:4px;align-items:center;}
 .pill{display:inline-flex;align-items:center;height:28px;padding:0 14px;border:1px solid #282828;border-radius:100px;font-size:8px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#666;background:transparent;}
-.pill-desc{flex:1;}.pill-rate{width:80px;justify-content:center;}.pill-hrs{width:70px;justify-content:center;}.pill-amount{width:90px;justify-content:flex-end;}
+.pill-desc{flex:1;}.pill-amount{width:90px;justify-content:flex-end;}
 .item-row{display:flex;align-items:flex-start;padding:13px 0;border-bottom:1px solid #141414;}
 .item-row:last-child{border-bottom:none;}
 .item-left{flex:1;}
 .item-title{font-size:12.5px;font-weight:600;color:#fff;margin-bottom:3px;letter-spacing:-0.2px;}
 .item-subtitle{font-size:10px;color:#777;display:flex;align-items:center;gap:4px;}
 .item-subtitle::before{content:'>';color:#555;font-size:11px;}
-.item-rate{width:80px;text-align:center;font-size:12px;color:#ccc;padding-top:1px;}
-.item-hrs{width:70px;text-align:center;font-size:12px;color:#ccc;padding-top:1px;}
 .item-amount{width:90px;text-align:right;font-size:12px;font-weight:500;color:#fff;padding-top:1px;}
 .total-row{display:flex;justify-content:flex-end;align-items:center;padding-top:14px;gap:20px;}
 .total-label{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#666;}
@@ -58,9 +56,7 @@ body{background:#080808;color:#fff;font-family:'Inter',system-ui,sans-serif;font
   .table-header{display:none;}
   .item-row{flex-wrap:wrap;gap:6px;}
   .item-left{flex:1 1 100%;}
-  .item-rate,.item-hrs,.item-amount{width:auto;text-align:left;font-size:11px;}
-  .item-rate::before{content:'Taux: ';color:#555;font-size:9px;}
-  .item-hrs::before{content:'Heures: ';color:#555;font-size:9px;}
+  .item-amount{width:auto;text-align:left;font-size:11px;}
   .item-amount::before{content:'Montant: ';color:#555;font-size:9px;}
   .item-amount{margin-left:auto;}
   .payment-card{flex-direction:column;gap:12px;}
@@ -80,7 +76,7 @@ body{background:#080808;color:#fff;font-family:'Inter',system-ui,sans-serif;font
 
 <div class="header">
   <div class="logo"><div class="logo-icon">K</div><div class="logo-wordmark">KEVIN LE JUNTER</div></div>
-  <div class="header-invoice"><div class="inv-number">FACTURE N. 0025</div><div class="inv-date">25 Avril 2026</div></div>
+  <div class="header-invoice"><div class="inv-number">FACTURE N. 0027</div><div class="inv-date">18 Mai 2026</div></div>
 </div>
 
 <div class="parties">
@@ -98,62 +94,35 @@ body{background:#080808;color:#fff;font-family:'Inter',system-ui,sans-serif;font
 </div>
 
 <div class="table-card">
-  <div class="table-header"><div class="pill pill-desc">Description</div><div class="pill pill-rate">Taux</div><div class="pill pill-hrs">Heures</div><div class="pill pill-amount">Montant</div></div>
-  <div class="item-row"><div class="item-left"><div class="item-title">Corrections backend API</div><div class="item-subtitle">Proxy Brevo/Sendinblue, pagination users, emails hardening, mayors null-checks, 500 cleanup prod</div></div><div class="item-rate">37.50 &euro;</div><div class="item-hrs">5</div><div class="item-amount">187.50 &euro;</div></div>
-  <div class="item-row"><div class="item-left"><div class="item-title">Stabilisation frontend Angular</div><div class="item-subtitle">6 fixes E2E, messagerie citoyen/maire, responsive mobile, isolation envs beta/prod</div></div><div class="item-rate">37.50 &euro;</div><div class="item-hrs">4</div><div class="item-amount">150.00 &euro;</div></div>
-  <div class="item-row"><div class="item-left"><div class="item-title">Corrections Flutter</div><div class="item-subtitle">Firebase platform options, null safety pass, bindings optimisation, video upload</div></div><div class="item-rate">37.50 &euro;</div><div class="item-hrs">3</div><div class="item-amount">112.50 &euro;</div></div>
-  <div class="item-row"><div class="item-left"><div class="item-title">Deploiements &amp; validation beta+prod</div><div class="item-subtitle">Deploy GAE API+APP, smoke tests, cleanup versions, whitelist IP Brevo</div></div><div class="item-rate">37.50 &euro;</div><div class="item-hrs">2.5</div><div class="item-amount">93.75 &euro;</div></div>
-  <div class="item-row"><div class="item-left"><div class="item-title">Securisation &amp; corrections critiques</div><div class="item-subtitle">Fix injection cron, staggering PHP-FPM, CORS, interceptor backoff, map iframe reload loop</div></div><div class="item-rate">37.50 &euro;</div><div class="item-hrs">2.5</div><div class="item-amount">93.75 &euro;</div></div>
-  <div class="item-row"><div class="item-left"><div class="item-title">Responsive iPad &amp; optimisations multi-devices</div><div class="item-subtitle">Adaptation tablette, breakpoints iPad, media queries, grilles responsives globales</div></div><div class="item-rate">37.50 &euro;</div><div class="item-hrs">2.5</div><div class="item-amount">93.75 &euro;</div></div>
-  <div class="item-row"><div class="item-left"><div class="item-title">Refonte fiches detail &amp; captures</div><div class="item-subtitle">Fix modal fiches administres, dashboard, meteo, cache images, ameliorations visuelles</div></div><div class="item-rate">37.50 &euro;</div><div class="item-hrs">2</div><div class="item-amount">75.00 &euro;</div></div>
-  <div class="item-row"><div class="item-left"><div class="item-title">Corrections chargement &amp; gestion comptes</div><div class="item-subtitle">Fix loading messagerie, swap comptes via API v2, scroll infini, navigation multi-roles</div></div><div class="item-rate">37.50 &euro;</div><div class="item-hrs">1.5</div><div class="item-amount">56.25 &euro;</div></div>
-  <div class="item-row"><div class="item-left"><div class="item-title">Setup environnement beta + prod pour migration Cloud Run</div><div class="item-subtitle">Optimisation et reduction des couts d'infrastructure (2 derniers mois)</div></div><div class="item-rate">&mdash;</div><div class="item-hrs">&mdash;</div><div class="item-amount">150.00 &euro;</div></div>
-  <div class="total-row"><span class="total-label">Total</span><span class="total-amount">1 012.50 &euro;</span></div>
+  <div class="table-header"><div class="pill pill-desc">Description</div><div class="pill pill-amount">Montant</div></div>
+  <div class="item-row">
+    <div class="item-left"><div class="item-title">Integration et connexion au blog Maires &amp; Citoyens</div><div class="item-subtitle">Mise en place du lien blog dans l'application MEC</div></div>
+    <div class="item-amount">200.00 &euro;</div>
+  </div>
+  <div class="total-row"><span class="total-label">Total</span><span class="total-amount">200.00 &euro;</span></div>
 </div>
 
 <div class="tva-note">TVA non applicable, art. 293 B du CGI</div>
 
 <div class="payment-card">
   <div><div class="payment-title">Reglement :</div><div class="payment-sub">Virement bancaire<br>IBAN : FR76 2823 3000 0133 9117 2040 339<br>BIC : REVOLT21</div></div>
-  <div><div class="payment-amount">1 012.50 &euro;</div></div>
+  <div><div class="payment-amount">200.00 &euro;</div></div>
 </div>
 
 <div class="footer">
   <div class="footer-left">Kevin Le Junter &middot; lejunterkevin@gmail.com &middot; SIRET 924 189 863 00013</div>
-  <div class="footer-right">Facture 0025</div>
+  <div class="footer-right">Facture 0027</div>
 </div>
 
 <script src="jspdf.min.js"></script>
 <script>
-const ITEMS = [
-  { title: "Corrections backend API", sub: "Proxy Brevo/Sendinblue, pagination users, emails hardening, mayors null-checks, 500 cleanup prod", rate: "37.50", hrs: "5", amount: "187.50" },
-  { title: "Stabilisation frontend Angular", sub: "6 fixes E2E, messagerie citoyen/maire, responsive mobile, isolation envs beta/prod", rate: "37.50", hrs: "4", amount: "150.00" },
-  { title: "Corrections Flutter", sub: "Firebase platform options, null safety pass, bindings optimisation, video upload", rate: "37.50", hrs: "3", amount: "112.50" },
-  { title: "Deploiements & validation beta+prod", sub: "Deploy GAE API+APP, smoke tests, cleanup versions, whitelist IP Brevo", rate: "37.50", hrs: "2.5", amount: "93.75" },
-  { title: "Securisation & corrections critiques", sub: "Fix injection cron, staggering PHP-FPM, CORS, interceptor backoff, map iframe reload loop", rate: "37.50", hrs: "2.5", amount: "93.75" },
-  { title: "Responsive iPad & optimisations multi-devices", sub: "Adaptation tablette, breakpoints iPad, media queries, grilles responsives globales", rate: "37.50", hrs: "2.5", amount: "93.75" },
-  { title: "Refonte fiches detail & captures", sub: "Fix modal fiches administres, dashboard, meteo, cache images, ameliorations visuelles", rate: "37.50", hrs: "2", amount: "75.00" },
-  { title: "Corrections chargement & gestion comptes", sub: "Fix loading messagerie, swap comptes via API v2, scroll infini, navigation multi-roles", rate: "37.50", hrs: "1.5", amount: "56.25" },
-  { title: "Setup environnement beta + prod pour migration Cloud Run", sub: "Optimisation et reduction des couts d'infrastructure (2 derniers mois)", rate: "—", hrs: "—", amount: "150.00" }
-];
-
 function exportPDF() {
   const jsPDF = window.jspdf?.jsPDF || window.jsPDF;
   if (!jsPDF) { alert("Erreur: jsPDF non charge. Rechargez la page."); return; }
   const doc = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
   const W = 210, H = 297, M = 14, cw = W - M * 2;
-  const ROW_H = 12;
 
-  function drawBg() { doc.setFillColor(8, 8, 8); doc.rect(0, 0, W, H, "F"); }
-  function drawFooter() {
-    doc.setDrawColor(22, 22, 22); doc.line(M, H - 18, W - M, H - 18);
-    doc.setFontSize(6.5); doc.setFont("helvetica", "normal"); doc.setTextColor(51, 51, 51);
-    doc.text("Kevin Le Junter · lejunterkevin@gmail.com · SIRET 924 189 863 00013", M, H - 14);
-    doc.setTextColor(68, 68, 68);
-    doc.text("Facture 0025", W - M, H - 14, { align: "right" });
-  }
-
-  drawBg();
+  doc.setFillColor(8, 8, 8); doc.rect(0, 0, W, H, "F");
 
   // Header
   doc.setFillColor(26, 26, 26); doc.roundedRect(M, 12, 10, 10, 2, 2, "F");
@@ -161,8 +130,9 @@ function exportPDF() {
   doc.text("K", M + 5, 19.5, { align: "center" });
   doc.setFontSize(16); doc.text("KEVIN LE JUNTER", M + 13, 19);
   doc.setFontSize(9); doc.setFont("helvetica", "normal"); doc.setTextColor(153, 153, 153);
-  doc.text("FACTURE N. 0025", W - M, 16, { align: "right" });
-  doc.text("25 Avril 2026", W - M, 21, { align: "right" });
+  doc.text("FACTURE N. 0027", W - M, 16, { align: "right" });
+  doc.text("18 Mai 2026", W - M, 21, { align: "right" });
+
   doc.setDrawColor(34, 34, 34); doc.setLineWidth(0.3); doc.line(M, 28, W - M, 28);
 
   // Cards
@@ -188,65 +158,32 @@ function exportPDF() {
   doc.setFontSize(7); doc.setTextColor(102, 102, 102);
   doc.text("983 160 797 R.C.S. PARIS", rightX + rightW - 5, cardY + cardH - 4, { align: "right" });
 
-  // Table header
+  // Table
   let ty = cardY + cardH + 10;
   doc.setFontSize(6.5); doc.setFont("helvetica", "bold"); doc.setTextColor(102, 102, 102);
   doc.text("DESCRIPTION", M + 8, ty + 4);
-  doc.text("TAUX", 120, ty + 4, { align: "center" });
-  doc.text("HEURES", 142, ty + 4, { align: "center" });
   doc.text("MONTANT", W - M - 5, ty + 4, { align: "right" });
   doc.setDrawColor(20, 20, 20); doc.line(M, ty + 7, W - M, ty + 7);
   ty += 12;
 
-  // Items
-  const maxY = H - 75;
-  for (let i = 0; i < ITEMS.length; i++) {
-    if (ty + ROW_H > maxY) {
-      drawFooter();
-      doc.addPage(); drawBg();
-      ty = 20;
-      doc.setFontSize(7); doc.setFont("helvetica", "normal"); doc.setTextColor(153, 153, 153);
-      doc.text("FACTURE N. 0025 — Page 2", M, 14);
-      doc.setDrawColor(34, 34, 34); doc.line(M, 16, W - M, 16);
-      ty = 22;
-      doc.setFontSize(6.5); doc.setFont("helvetica", "bold"); doc.setTextColor(102, 102, 102);
-      doc.text("DESCRIPTION", M + 8, ty + 4);
-      doc.text("TAUX", 120, ty + 4, { align: "center" });
-      doc.text("HEURES", 142, ty + 4, { align: "center" });
-      doc.text("MONTANT", W - M - 5, ty + 4, { align: "right" });
-      doc.setDrawColor(20, 20, 20); doc.line(M, ty + 7, W - M, ty + 7);
-      ty += 12;
-    }
-    const item = ITEMS[i];
-    doc.setFontSize(9); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
-    doc.text(item.title, M + 5, ty);
-    doc.setFontSize(7); doc.setFont("helvetica", "normal"); doc.setTextColor(119, 119, 119);
-    doc.text("> " + item.sub, M + 5, ty + 4.5);
-    doc.setFontSize(8.5); doc.setFont("helvetica", "normal"); doc.setTextColor(204, 204, 204);
-    doc.text(item.rate + " €", 120, ty, { align: "center" });
-    doc.text(item.hrs, 142, ty, { align: "center" });
-    doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
-    doc.text(item.amount + " €", W - M - 5, ty, { align: "right" });
+  doc.setFontSize(9.5); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
+  doc.text("Integration et connexion au blog Maires & Citoyens", M + 5, ty);
+  doc.setFontSize(7.5); doc.setFont("helvetica", "normal"); doc.setTextColor(119, 119, 119);
+  doc.text("> Mise en place du lien blog dans l'application MEC", M + 5, ty + 5);
+  doc.setFontSize(9); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
+  doc.text("200.00 €", W - M - 5, ty, { align: "right" });
+  ty += 14;
 
-    if (i < ITEMS.length - 1) {
-      doc.setDrawColor(20, 20, 20); doc.line(M + 3, ty + 8, W - M - 3, ty + 8);
-    }
-    ty += ROW_H;
-  }
-
-  // Total
-  doc.setDrawColor(20, 20, 20); doc.line(120, ty + 2, W - M, ty + 2); ty += 8;
+  doc.setDrawColor(20, 20, 20); doc.line(120, ty, W - M, ty); ty += 6;
   doc.setFontSize(7.5); doc.setFont("helvetica", "bold"); doc.setTextColor(102, 102, 102);
   doc.text("TOTAL", 150, ty, { align: "right" });
   doc.setFontSize(11); doc.setTextColor(255, 255, 255);
-  doc.text("1 012.50 €", W - M - 5, ty, { align: "right" });
+  doc.text("200.00 €", W - M - 5, ty, { align: "right" });
 
-  // TVA
   ty += 10;
   doc.setFontSize(7); doc.setFont("helvetica", "italic"); doc.setTextColor(85, 85, 85);
   doc.text("TVA non applicable, art. 293 B du CGI", W / 2, ty, { align: "center" });
 
-  // Payment
   ty += 8;
   doc.setDrawColor(34, 34, 34); doc.roundedRect(M, ty, cw, 28, 3, 3, "S");
   doc.setFontSize(10); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
@@ -256,10 +193,15 @@ function exportPDF() {
   doc.text("IBAN : FR76 2823 3000 0133 9117 2040 339", M + 5, ty + 19);
   doc.text("BIC : REVOLT21", M + 5, ty + 24);
   doc.setFontSize(14); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
-  doc.text("1 012.50 €", W - M - 5, ty + 14, { align: "right" });
+  doc.text("200.00 €", W - M - 5, ty + 14, { align: "right" });
 
-  drawFooter();
-  doc.save("Facture-0025-Kevin-Le-Junter.pdf");
+  doc.setDrawColor(22, 22, 22); doc.line(M, H - 18, W - M, H - 18);
+  doc.setFontSize(6.5); doc.setFont("helvetica", "normal"); doc.setTextColor(51, 51, 51);
+  doc.text("Kevin Le Junter · lejunterkevin@gmail.com · SIRET 924 189 863 00013", M, H - 14);
+  doc.setTextColor(68, 68, 68);
+  doc.text("Facture 0027", W - M, H - 14, { align: "right" });
+
+  doc.save("Facture-0027-Kevin-Le-Junter.pdf");
 }
 </script>
 </body>
