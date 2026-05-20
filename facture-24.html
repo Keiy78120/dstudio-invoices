@@ -97,16 +97,16 @@ body{background:#080808;color:#fff;font-family:'Inter',system-ui,sans-serif;font
   <div class="table-header"><div class="pill pill-desc">Description</div><div class="pill pill-amount">Montant</div></div>
   <div class="item-row">
     <div class="item-left"><div class="item-title">Chef de projet technique</div><div class="item-subtitle">Coordination et pilotage technique pour D-Studio</div></div>
-    <div class="item-amount">800.00 &euro;</div>
+    <div class="item-amount">1 000.00 &euro;</div>
   </div>
-  <div class="total-row"><span class="total-label">Total</span><span class="total-amount">800.00 &euro;</span></div>
+  <div class="total-row"><span class="total-label">Total</span><span class="total-amount">1 000.00 &euro;</span></div>
 </div>
 
 <div class="tva-note">TVA non applicable, art. 293 B du CGI</div>
 
 <div class="payment-card">
   <div><div class="payment-title">Reglement :</div><div class="payment-sub">Virement bancaire<br>IBAN : FR76 1751 5006 0004 1234 2685 319<br>BIC : CEPAFRPP751</div></div>
-  <div><div class="payment-amount">800.00 &euro;</div></div>
+  <div><div class="payment-amount">1 000.00 &euro;</div></div>
 </div>
 
 <div class="footer">
@@ -171,14 +171,14 @@ function exportPDF() {
   doc.setFontSize(7.5); doc.setFont("helvetica", "normal"); doc.setTextColor(119, 119, 119);
   doc.text("> Coordination et pilotage technique pour D-Studio", M + 5, ty + 5);
   doc.setFontSize(9); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
-  doc.text("800.00 \u20AC", W - M - 5, ty, { align: "right" });
+  doc.text("1 000.00 \u20AC", W - M - 5, ty, { align: "right" });
   ty += 14;
 
   doc.setDrawColor(20, 20, 20); doc.line(120, ty, W - M, ty); ty += 6;
   doc.setFontSize(7.5); doc.setFont("helvetica", "bold"); doc.setTextColor(102, 102, 102);
   doc.text("TOTAL", 150, ty, { align: "right" });
   doc.setFontSize(11); doc.setTextColor(255, 255, 255);
-  doc.text("800.00 \u20AC", W - M - 5, ty, { align: "right" });
+  doc.text("1 000.00 \u20AC", W - M - 5, ty, { align: "right" });
 
   ty += 10;
   doc.setFontSize(7); doc.setFont("helvetica", "italic"); doc.setTextColor(85, 85, 85);
@@ -193,7 +193,7 @@ function exportPDF() {
   doc.text("IBAN : FR76 1751 5006 0004 1234 2685 319", M + 5, ty + 19);
   doc.text("BIC : CEPAFRPP751", M + 5, ty + 24);
   doc.setFontSize(14); doc.setFont("helvetica", "bold"); doc.setTextColor(255, 255, 255);
-  doc.text("800.00 \u20AC", W - M - 5, ty + 14, { align: "right" });
+  doc.text("1 000.00 \u20AC", W - M - 5, ty + 14, { align: "right" });
 
   doc.setDrawColor(22, 22, 22); doc.line(M, H - 18, W - M, H - 18);
   doc.setFontSize(6.5); doc.setFont("helvetica", "normal"); doc.setTextColor(51, 51, 51);
