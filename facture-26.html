@@ -76,7 +76,7 @@ body{background:#080808;color:#fff;font-family:'Inter',system-ui,sans-serif;font
 
 <div class="header">
   <div class="logo"><div class="logo-icon">K</div><div class="logo-wordmark">KEVIN LE JUNTER</div></div>
-  <div class="header-invoice"><div class="inv-number">FACTURE N. 0026</div><div class="inv-date">25 Avril 2026</div></div>
+  <div class="header-invoice"><div class="inv-number">FACTURE N. 0026</div><div class="inv-date">25 Mai 2026</div></div>
 </div>
 
 <div class="parties">
@@ -131,7 +131,7 @@ function exportPDF() {
   doc.setFontSize(16); doc.text("KEVIN LE JUNTER", M + 13, 19);
   doc.setFontSize(9); doc.setFont("helvetica", "normal"); doc.setTextColor(153, 153, 153);
   doc.text("FACTURE N. 0026", W - M, 16, { align: "right" });
-  doc.text("25 Avril 2026", W - M, 21, { align: "right" });
+  doc.text("25 Mai 2026", W - M, 21, { align: "right" });
 
   doc.setDrawColor(34, 34, 34); doc.setLineWidth(0.3); doc.line(M, 28, W - M, 28);
 
