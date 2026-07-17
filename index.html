@@ -63,6 +63,12 @@ a.card:hover{border-color:rgba(255,255,255,0.16);transform:translateY(-2px);back
 a.card:hover .card-arrow{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.16);}
 a.card:hover .card-arrow i{stroke:rgba(255,255,255,0.7);}
 
+details.archive{margin-bottom:56px;}
+details.archive>summary{list-style:none;cursor:pointer;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,0.05);display:flex;align-items:center;gap:10px;}
+details.archive>summary::-webkit-details-marker{display:none;}
+details.archive .arch-count{font-size:10px;color:rgba(255,255,255,0.18);font-weight:500;letter-spacing:.04em;}
+details.archive .chev{margin-left:auto;transition:transform .2s;width:14px;height:14px;stroke:rgba(255,255,255,0.3);}
+details.archive[open] .chev{transform:rotate(180deg);}
 footer{position:relative;z-index:1;padding:24px 40px;border-top:1px solid rgba(255,255,255,0.05);display:flex;justify-content:space-between;font-size:10px;color:rgba(255,255,255,0.18);}
 @media(max-width:640px){
   nav{padding:16px 20px;}
@@ -90,62 +96,6 @@ footer{position:relative;z-index:1;padding:24px 40px;border-top:1px solid rgba(2
       <div class="section-label">Factures Kevin Le Junter</div>
     </div>
     <div class="grid">
-
-      <a class="card" href="facture-14.html">
-        <div class="card-top">
-          <div class="card-icon-box"><i data-lucide="file-text"></i></div>
-          <span class="badge badge-amount">400.00 &euro;</span>
-        </div>
-        <div class="card-sector">Facture N. 0014</div>
-        <div class="card-name">Community management D-Studio</div>
-        <div class="card-desc">Gestion reseaux sociaux et animation communaute — 10.67h a 37.50&euro;/h</div>
-        <div class="card-foot">
-          <span class="card-date">4 Fevrier 2025</span>
-          <div class="card-arrow"><i data-lucide="arrow-up-right"></i></div>
-        </div>
-      </a>
-
-      <a class="card" href="facture-22.html">
-        <div class="card-top">
-          <div class="card-icon-box"><i data-lucide="file-text"></i></div>
-          <span class="badge badge-amount">800.00 &euro;</span>
-        </div>
-        <div class="card-sector">Facture N. 0022</div>
-        <div class="card-name">Landing page Kalel Invest</div>
-        <div class="card-desc">Integration depuis Figma mockup — 21.33h a 37.50&euro;/h</div>
-        <div class="card-foot">
-          <span class="card-date">26 Mars 2026</span>
-          <div class="card-arrow"><i data-lucide="arrow-up-right"></i></div>
-        </div>
-      </a>
-
-      <a class="card" href="facture-23.html">
-        <div class="card-top">
-          <div class="card-icon-box"><i data-lucide="file-text"></i></div>
-          <span class="badge badge-amount">431.25 &euro;</span>
-        </div>
-        <div class="card-sector">Facture N. 0023</div>
-        <div class="card-name">Bug fixes Maires &amp; Citoyens</div>
-        <div class="card-desc">12 corrections fevrier 2026 — 11.5h a 37.50&euro;/h</div>
-        <div class="card-foot">
-          <span class="card-date">26 Mars 2026</span>
-          <div class="card-arrow"><i data-lucide="arrow-up-right"></i></div>
-        </div>
-      </a>
-
-      <a class="card" href="facture-24.html">
-        <div class="card-top">
-          <div class="card-icon-box"><i data-lucide="file-text"></i></div>
-          <span class="badge badge-amount">1 000.00 &euro;</span>
-        </div>
-        <div class="card-sector">Facture N. 0024</div>
-        <div class="card-name">Chef de projet technique</div>
-        <div class="card-desc">Coordination et pilotage technique pour D-Studio</div>
-        <div class="card-foot">
-          <span class="card-date">26 Mars 2026</span>
-          <div class="card-arrow"><i data-lucide="arrow-up-right"></i></div>
-        </div>
-      </a>
 
       <a class="card" href="facture-25-A.html">
         <div class="card-top">
@@ -201,6 +151,32 @@ footer{position:relative;z-index:1;padding:24px 40px;border-top:1px solid rgba(2
         </div>
       </a>
 
+      <a class="card" href="facture-33.html">
+        <div class="card-top">
+          <div class="card-icon-box"><i data-lucide="file-text"></i></div>
+          <span class="badge badge-amount">1 000.00 &euro;</span>
+        </div>
+        <div class="card-sector">Facture N. 0033</div>
+        <div class="card-name">Chef de projet technique</div>
+        <div class="card-desc">Coordination et pilotage technique pour D-Studio — mai 2026</div>
+        <div class="card-foot">
+          <span class="card-date">1er Mai 2026</span>
+          <div class="card-arrow"><i data-lucide="arrow-up-right"></i></div>
+        </div>
+      </a>
+      <a class="card" href="facture-31.html">
+        <div class="card-top">
+          <div class="card-icon-box"><i data-lucide="file-text"></i></div>
+          <span class="badge badge-amount">1 000.00 &euro;</span>
+        </div>
+        <div class="card-sector">Facture N. 0031</div>
+        <div class="card-name">Chef de projet technique</div>
+        <div class="card-desc">Coordination et pilotage technique pour D-Studio — juin 2026</div>
+        <div class="card-foot">
+          <span class="card-date">1er Juin 2026</span>
+          <div class="card-arrow"><i data-lucide="arrow-up-right"></i></div>
+        </div>
+      </a>
       <a class="card" href="facture-28.html">
         <div class="card-top">
           <div class="card-icon-box"><i data-lucide="file-text"></i></div>
@@ -240,9 +216,85 @@ footer{position:relative;z-index:1;padding:24px 40px;border-top:1px solid rgba(2
           <div class="card-arrow"><i data-lucide="arrow-up-right"></i></div>
         </div>
       </a>
+      <a class="card" href="facture-32.html">
+        <div class="card-top">
+          <div class="card-icon-box"><i data-lucide="file-text"></i></div>
+          <span class="badge badge-amount">1 000.00 &euro;</span>
+        </div>
+        <div class="card-sector">Facture N. 0032</div>
+        <div class="card-name">Maintenance Maires et Citoyens</div>
+        <div class="card-desc">Contrat de maintenance + migrations (août 2026)</div>
+        <div class="card-foot">
+          <span class="card-date">1er Août 2026</span>
+          <div class="card-arrow"><i data-lucide="arrow-up-right"></i></div>
+        </div>
+      </a>
 
     </div>
   </div>
+  <details class="archive">
+    <summary>
+      <span class="section-label">Archives &middot; +3 mois</span>
+      <span class="arch-count">4 factures</span>
+      <i class="chev" data-lucide="chevron-down"></i>
+    </summary>
+    <div class="grid">
+
+      <a class="card" href="facture-14.html">
+        <div class="card-top">
+          <div class="card-icon-box"><i data-lucide="file-text"></i></div>
+          <span class="badge badge-amount">400.00 &euro;</span>
+        </div>
+        <div class="card-sector">Facture N. 0014</div>
+        <div class="card-name">Community management D-Studio</div>
+        <div class="card-desc">Gestion reseaux sociaux et animation communaute — 10.67h a 37.50&euro;/h</div>
+        <div class="card-foot">
+          <span class="card-date">4 Fevrier 2025</span>
+          <div class="card-arrow"><i data-lucide="arrow-up-right"></i></div>
+        </div>
+      </a>
+      <a class="card" href="facture-22.html">
+        <div class="card-top">
+          <div class="card-icon-box"><i data-lucide="file-text"></i></div>
+          <span class="badge badge-amount">800.00 &euro;</span>
+        </div>
+        <div class="card-sector">Facture N. 0022</div>
+        <div class="card-name">Landing page Kalel Invest</div>
+        <div class="card-desc">Integration depuis Figma mockup — 21.33h a 37.50&euro;/h</div>
+        <div class="card-foot">
+          <span class="card-date">26 Mars 2026</span>
+          <div class="card-arrow"><i data-lucide="arrow-up-right"></i></div>
+        </div>
+      </a>
+      <a class="card" href="facture-23.html">
+        <div class="card-top">
+          <div class="card-icon-box"><i data-lucide="file-text"></i></div>
+          <span class="badge badge-amount">431.25 &euro;</span>
+        </div>
+        <div class="card-sector">Facture N. 0023</div>
+        <div class="card-name">Bug fixes Maires &amp; Citoyens</div>
+        <div class="card-desc">12 corrections fevrier 2026 — 11.5h a 37.50&euro;/h</div>
+        <div class="card-foot">
+          <span class="card-date">26 Mars 2026</span>
+          <div class="card-arrow"><i data-lucide="arrow-up-right"></i></div>
+        </div>
+      </a>
+      <a class="card" href="facture-24.html">
+        <div class="card-top">
+          <div class="card-icon-box"><i data-lucide="file-text"></i></div>
+          <span class="badge badge-amount">1 000.00 &euro;</span>
+        </div>
+        <div class="card-sector">Facture N. 0024</div>
+        <div class="card-name">Chef de projet technique</div>
+        <div class="card-desc">Coordination et pilotage technique pour D-Studio</div>
+        <div class="card-foot">
+          <span class="card-date">26 Mars 2026</span>
+          <div class="card-arrow"><i data-lucide="arrow-up-right"></i></div>
+        </div>
+      </a>
+
+    </div>
+  </details>
 </main>
 
 <footer>
